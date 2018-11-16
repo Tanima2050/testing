@@ -1,0 +1,45 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <input type="text" placeholder="Enter your name..." id="myinput"><br><br>
+    <button onclick="save();">save</button><br><br>
+    <button onclick="show();">show</button><br><br>
+    <button onclick="createSession();">login</button><br><br>
+    <label id="userId"></label><br>
+    <button onclick="sessionValue();">Get Session Value</button>
+</body>
+<script>
+    function save(){
+        var x=document.getElementById("myinput").value;
+        localStorage.setItem("data",x);
+    }
+    function show(){
+        var y=localStorage.getItem("data");
+        console.log(y);
+        
+    }
+    function createSession() {
+        var x = document.getElementById("myinput").value;
+        sessionStorage.setItem("data", x);
+    }
+    function sessionValue() {
+
+        if (sessionStorage.data) {
+            document.getElementById("userId").innerHTML = sessionStorage.getItem("data").toString();
+        }
+        else {
+            document.getElementById("userId").innerHTML = "no session created !"
+        }
+    }
+
+    // var siteName = 'my Site',
+    //     siteDes = 'Another JS Site';
+    // localStorage.setItem('siteName', siteName);
+    // localStorage.setItem('siteDes', siteDes);
+</script>
+
+</html>

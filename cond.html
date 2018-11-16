@@ -1,0 +1,125 @@
+<html>
+
+<head>
+    <style>
+        .menuitem {
+            width: 30%;
+    background: #CDF0F6;
+    border: 1px solid #d4d4d4;
+    border-radius: none;
+    list-style-type: none;
+    margin: 10px;
+    padding: 2px;
+}
+.column {
+    float: left;
+    width: 30%;
+    padding: 5px;
+    display: table;
+
+
+}
+ body{
+     counter-reset: value;
+
+ }
+ h1::before{
+     counter-increment: value;
+     content:"Option " counter(value)":";
+ }
+
+p{
+    display: none;
+    background-color: yellow;
+    padding: 20px;
+}
+div:hover p {
+    display: block;
+}
+@media screen and (max-width:400px){
+    body{
+        background-color: aquamarine;
+    }
+ .column{
+     width:120%;
+ }
+
+}
+    </style>
+  
+    <script>
+
+        // i = 12;
+        // var i;
+        // if (i > 18) {
+        //     console.log("allow");
+
+        // } else {
+        //     console.log("not allow");
+        // }
+        // var i;
+        var txt = '{"name":"John", "age":30, "city":"New York"}'
+          var test = JSON.parse(txt);
+          console.log(test);
+            
+           
+        //    var obj = JSON.parse(txt);
+        //    console.log(obj.name+" "+obj.city);
+    
+            // for (i = 0; i < array.length; i++) {
+            //     console.log(array[i]);
+     
+            // }
+       
+    </script>
+</head>
+
+<body>
+        <div>hello i am pseudo class
+        <p>hi i am tooltip</p>
+    </div>
+    <h1>
+        apple
+    </h1>
+    
+    <h1>
+            apple
+        </h1>
+        <h1>
+                apple
+            </h1>
+            <div class="row">
+                <div class="column">
+                        <ul id="menulist">
+                                <li class="menuitem">Menu-item 1</li>
+                                <li class="menuitem">Menu-item 2</li>
+                                <li class="menuitem">Menu-item 3</li>
+                                <li class="menuitem">Menu-item 4</li>
+                                <li class="menuitem">Menu-item 5</li>
+                             </ul>
+                </div>
+                <div class="column">
+                        <ul id="menulist">
+                                <li class="menuitem">Menu-item 1</li>
+                                <li class="menuitem">Menu-item 2</li>
+                                <li class="menuitem">Menu-item 3</li>
+                                <li class="menuitem">Menu-item 4</li>
+                                <li class="menuitem">Menu-item 5</li>
+                             </ul>
+                </div>
+                <div class="column">
+                        <ul id="menulist">
+                                <li class="menuitem">Menu-item 1</li>
+                                <li class="menuitem">Menu-item 2</li>
+                                <li class="menuitem">Menu-item 3</li>
+                                <li class="menuitem">Menu-item 4</li>
+                                <li class="menuitem">Menu-item 5</li>
+                             </ul>
+                </div>
+
+
+            </div>
+           
+        </body>
+
+</html>

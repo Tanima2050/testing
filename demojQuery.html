@@ -1,0 +1,130 @@
+<html>
+
+<head>
+    <script src="jQuery/jquery-3.3.1.min.js">
+    </script>
+    <!--  <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#test").html("hi I am good");$("#test").css("color","red");
+          
+
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+        <p>how are you  ?</p>
+    <button>submit</button>
+  
+   <div id="test"></div>
+</body> -->
+
+
+<body>
+    <!-- <p>Enter your name?</p>
+        <p><input type="text" placeholder="your name" id="term"></p>
+        
+        <button id="hit">Submit</button> -->
+    
+</body>
+
+<script>
+ 
+  
+    // let myfunction1 = new Promise((resolve, reject) => {
+    //     setTimeout( () =>{
+    //         resolve('Success !');
+    //     }, 1000)
+
+    //     // reject('not Success !')
+    // })
+    // myfunction1.then((data) => {
+    //     console.log(data);
+    // }).catch((err) => {
+    //     console.log(err);
+    // })
+
+
+    // let myfunction = function () {
+    //     return new Promise(function (resolve, reject) {
+    //         resolve('resolve first ');
+
+    //     })
+
+    // }
+    // console.log( myfunction(fromSecond));
+    // let secondfunction = function () {
+    //     return new Promise(function (resolve, reject) {
+    //         resolve('second resolve')
+    //     })
+    // }
+    // console.log(secondfunction());
+    // myfunction().then(function (data) {
+    //     console.log(myfunction(data));
+
+    // })
+    // secondfunction().then(function (seconddata) {
+    //     console.log(seconddata);
+
+    // }) 
+    class MyPromise{
+        constructor(message){
+
+        }
+        then(){
+
+        }
+    }
+    var myPromise=new MyPromise(function(message){
+        console.log(message);
+
+    });
+    myPromise.then();
+    function myfunction(message){
+        console.log(message);
+
+    }
+    myfunction("hello");
+            let mypromise = new Promise(function (resolve, reject) {
+                let message = false;
+                if (message) {
+                    resolve('welcome in javascript !');
+                }
+                else {
+                    reject('not showing  !');
+                }
+
+            });
+            mypromise.then(function (fromresolve) {
+                console.log('the message is' + fromresolve);
+            }).catch(function (fromreject) {
+                console.log('the message is ' + fromreject);
+            });
+</script>
+<!-- <script>
+    $(document).ready(function(){
+        var text1="<p>text.</p>";
+        var text2=$("<p></p>").html("text.");
+        var text3=document.createElement("p");
+        text3.innerHTML="text.";
+        $("#hit").click(function(){
+            $("body").append(text1,text2,text3);
+        })
+        
+    });
+    
+        $(document).ready(function(){
+           
+           $('#hit').click(function() {
+            var term = $('#term').val();
+            alert("welcome " +term+ " in this tutorial");
+          });
+        });
+        </script> -->
+</head>
+
+
+</html>

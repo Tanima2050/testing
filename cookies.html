@@ -1,0 +1,128 @@
+<html>
+<head>
+    <title>Cookie!!!</title>
+</head>
+<body onload="checkCookie()"></body>
+	<script type="text/javascript">
+		function createCookie(cookieName,cookieValue,daysToExpire)
+        {
+          var date = new Date();
+          date.setTime(date.getTime()+(daysToExpire*24*60*60*1000));
+          document.cookie = cookieName + "=" + cookieValue + "; expires=" + date.toGMTString();
+        }
+		function accessCookie(cookieName)
+        {
+          var name = cookieName + "=";
+          var allCookieArray = document.cookie.split(';');
+          for(var i=0; i<allCookieArray.length; i++)
+          {
+            var temp = allCookieArray[i].trim();
+            if (temp.indexOf(name)==0)
+            return temp.substring(name.length,temp.length);
+       	  }
+        	return "";
+        }
+		function checkCookie()
+        {
+          var user = accessCookie("testCookie");
+          if (user!="")
+        	alert("Welcome Back " + user + "!!!");
+          else
+          {
+            user = prompt("Please enter your name");
+            num = prompt("How many days you want to store your name on your computer?");
+            if (user!="" && user!=null)
+            {
+            createCookie("testCookie", user, num);
+            }
+          }
+        }
+	</script>
+
+
+</html>
+
+
+<!-- 
+<html>
+
+<head>
+
+</head>
+
+<body> -->
+    <!-- <select id="Colors" onchange="colors()">
+            <option value="Select Color">Select Color</option>
+            <option value="green">Green</option>
+            <option value="yellow">Yellow</option>
+            <option value="red">Red</option>
+          </select> -->
+          <!-- <form name="myform"> 
+                Name: <input type="text" name="name"id="txtname"><br><br>
+                Email: <input type="text"name="email" id="txtemail"><br><br>
+          </form> -->
+   
+
+    <!-- <button onclick="setcookie();">set cookie</button>
+    
+</body>
+<script>
+    function setcookie() { -->
+        <!-- // if(document.myform.name.cookie==" "){
+            
+        // }else if(document.myform.email.cookie==" "){
+         
+        // } -->
+        
+        <!-- cookievalue1=escape(document.myform.name.value)+" ";
+        cookievalue2=escape(document.myform.email.value)+";";
+        document.cookie = "name=" + cookievalue1;
+        document.cookie = "email=" + cookievalue2;
+        console.log("name :"+cookievalue1+"email:"+cookievalue2 )
+        //document.cookie = "email=" + document.getElementById("txtemail").value;
+
+    } -->
+    
+    
+
+    <!-- //     if (document.cookie.length != 0) 
+    // {
+
+    //         var cookiesArray = document.cookie.split("; ");
+         
+    //         for (var i = 0; i<cookiesArray.length; i++) {
+    //             var nameValueArray = cookiesArray[i].split("=");
+    //             console.log("hello2");
+    //             if (nameValueArray[0] == "name") {
+    //                 document.getElementById("txtname").value = nameValueArray[1];
+    //                 console.log("hello3");
+    //             }
+              
+    //             else if (nameValueArray[0] == "email") {
+    //                 document.getElementById("txtemail").value = nameValueArray[1];
+    //             }
+
+    //         }
+    // }
+    //     else {
+    //         alert("No cookies found");
+    //     }
+              // window.onload=function(){
+        //     if(document.cookie.length!=0){
+        //         var arrayList=document.cookie.split("=");
+        //         document.getElementById("Colors").value=arrayList[1];
+        //         document.bgColor=arrayList[1]
+
+        //     }
+        // }
+        // function colors() {
+        //     var selectedColor = document.getElementById("Colors").value;
+        //     if (selectedColor != "Select Color") {
+        //         document.bgColor = selectedColor;
+        //         document.cookie="color="+selectedColor;
+        //     }
+        // }
+
+</script>
+
+</html> -->

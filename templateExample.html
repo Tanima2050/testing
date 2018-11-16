@@ -1,0 +1,36 @@
+<html>
+    <head>
+<script src="jQuery/jquery-3.3.1.min.js"></script>
+    </head>
+    <body >
+            <h1>
+                Template
+            </h1>
+    
+        </body>
+    <script>
+    const person = {
+    name: 'Wes',
+    job: 'Web Developer',
+    city: 'Hamilton',
+    location:'India',
+    bio: 'Wes is a really cool guy that loves to teach web development!'
+}
+
+
+
+const markup = `
+ <div class="person">
+    <h2>
+        ${person.name}
+    </h2>
+    <p class="location">${person.location}</p>
+    <p class="bio">${person.bio}</p>
+ </div>
+`;
+
+document.body.innerHTML = markup;
+console.log(markup);
+</script>
+   
+</html>

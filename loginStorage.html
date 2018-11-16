@@ -1,0 +1,61 @@
+<html>
+    <head>
+
+    </head>
+    <script>
+function doFirst(){
+        var button=document.getElementById('button');
+        button.addEventListener("click",save);
+        display();
+
+}
+        
+        function save(){
+            var key=document.getElementById('name').value; 
+            var value=document.getElementById('email').value;
+            sessionStorage.setItem(key,value);
+            display();
+            key.value="";
+            value.value="";
+        }
+        function display(){
+            var displaydata=document.getElementById('displayData');
+            displaydata.innerHTML="";
+            for(var i=0;i<sessionStorage.length;i++){
+                var a=sessionStorage.key(i);
+                var b=sessionStorage.getItem(a);
+                displaydata.innerHTML+=a+" "+b;
+            }
+        }
+        window.addEventListener("load",doFirst);
+    </script>
+    <style>
+        #box{
+            background: antiquewhite;
+            left: 45%;
+             width: 175px; 
+             position:fixed;
+            border-radius:5px; 
+      
+        }
+    </style>
+    <body>
+        <section id="box">
+            <form>
+                <p>
+Name:<br><input type="text" id="name"/>
+                </p>
+                <p>
+Email:<br><input type="text" id="email"/>
+                </p>
+                <p>
+                    <input type="button" value="submit" id="button">
+                </p>
+            </form>
+
+        </section>
+        <section id="displayData">
+
+        </section>
+    </body>
+</html>
